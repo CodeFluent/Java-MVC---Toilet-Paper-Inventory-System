@@ -40,9 +40,9 @@ public class LoginServlet extends HttpServlet {
                 if (user.isLoggedIn()) {
                     HttpSession session = request.getSession(true);
                     session.setAttribute("currentUser", user);
-//                    response.sendRedirect("/Toilet-Paper-Inventory-System/jsp/Admin.jsp");
+                    response.sendRedirect("/web/jsp/Admin.jsp");
                 } else {
-//                    response.sendRedirect("/Toilet-Paper-Inventory-System/jsp/Invalid.jsp");
+                    response.sendRedirect("/web/jsp/Invalid.jsp");
                 }
 
             } catch (Exception e) {
