@@ -1,5 +1,6 @@
 package Beans;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class ProductBean {
     int stock;
     String name;
     String description;
-    double price;
+    Double price;
 
 
     public void setDescription(String description) {
@@ -48,8 +49,14 @@ public class ProductBean {
         return name;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
+    }
+    
+    public String printPrice() {
+        DecimalFormat decim = new DecimalFormat("0.00");
+        String s = decim.format(this.price);
+        return s;
     }
 
     public int getStock() {

@@ -39,8 +39,9 @@
           ProductBean p = ProductDAO.getProductById(productId);
           request.setAttribute("name", p.getName());
           request.setAttribute("description", p.getDescription());
-          request.setAttribute("cost", p.getPrice());
+          request.setAttribute("cost", p.printPrice());
           request.setAttribute("stock", p.getStock());
+          System.out.println(p.printPrice());
       %>
 
         
@@ -48,6 +49,7 @@
           <h1 class="mt-5">${name}</h1>
           <p class="lead">${description}</p>
           
+          <!--for le future: https://blackrockdigital.github.io/startbootstrap-shop-item/-->
           <div class="col-lg-9">
               <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
               <div class="card-body">
