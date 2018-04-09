@@ -7,7 +7,6 @@
 package Beans;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -15,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.mysql.jdbc.Driver;
 
 /**
  *
@@ -33,19 +33,19 @@ public class Test extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException, ClassNotFoundException {
 
-        String url = "jdbc:mysql://localhost:3306/TPIS";
-        String username = "codefluent";
+        String url = "jdbc:mysql://localhost:3306/tpis";
+        String username = "root";
         String password = "password";
 
         System.out.println("Connecting database...");
-        try (Connection connection = DriverManager.getConnection(url, username, password)) {
-            Class.forName("com.example.jdbc.Driver");
+        try {
+            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+            Connection connection = DriverManager.getConnection(url, username, password);
             System.out.println("Database connected!");
         } catch (SQLException e) {
             throw new IllegalStateException("Cannot connect the database!", e);
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             throw new IllegalStateException("Cannot connect the database cuz class!", e);
-
         }
 
     }
