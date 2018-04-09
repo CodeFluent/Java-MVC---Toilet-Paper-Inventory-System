@@ -18,7 +18,7 @@
         <header>
           <div class="navbar navbar-dark bg-dark box-shadow">
             <div class="container d-flex justify-content-between">
-              <a href="index.jsp" class="navbar-brand d-flex align-items-center">
+              <a href="../index.jsp" class="navbar-brand d-flex align-items-center">
                 <strong>Toilet Paper Inc.</strong>
               </a>
                 <nav class="my-2 my-md-0 mr-md-3">
@@ -32,7 +32,7 @@
         </header>
 
         <main role="main" class="container">
-          <h1 class="mt-5">Need to take a sh*t? We got what you need.</h1>
+          <h1 class="mt-5">Need to take a sh*t? We got your bottom covered.</h1>
           <p class="lead">{List of all products}</p>
         </main>
         

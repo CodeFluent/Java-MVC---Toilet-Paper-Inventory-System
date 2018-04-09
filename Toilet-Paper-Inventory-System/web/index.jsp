@@ -17,7 +17,7 @@
       <header>
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
-          <a href="" class="navbar-brand d-flex align-items-center">
+          <a href="index.jsp" class="navbar-brand d-flex align-items-center">
             <strong>Toilet Paper Inc.</strong>
           </a>
             <nav class="my-2 my-md-0 mr-md-3">
