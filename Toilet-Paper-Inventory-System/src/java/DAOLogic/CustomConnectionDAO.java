@@ -14,7 +14,6 @@ public class CustomConnectionDAO {
     
     public static Connection getConnection() throws Exception {
         
-        Class.forName("com.mysql.jdbc.Driver"); // normally unchanged.
         final String url = "jdbc:mysql://localhost:3306/" + ""; // append your app name here. 
         final String username = ""; // username for mysql 
         final String password = ""; // password for mysql 

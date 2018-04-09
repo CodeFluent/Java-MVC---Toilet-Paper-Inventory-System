@@ -26,7 +26,7 @@ public class UserDAO extends ConnectionDAO {
         Connection conn = null;
         Statement input = null;
         
-        System.out.println("Trying to login user " + username + "with password " + password + ".");
+        System.out.println("Trying to login user " + username + " with password " + password + ".");
         
         try {
             conn = ConnectionDAO.getConnection();
