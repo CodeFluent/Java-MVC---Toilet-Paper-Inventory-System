@@ -1,6 +1,6 @@
 /Toilet-Paper-Inventory-System/nbproject/private/
 /Toilet-Paper-Inventory-System/build/
-
+/Toilet-Paper-Inventory-System/src/java/DAOLogic/ConnectionDAO.java
 # Created by https://www.gitignore.io/api/netbeans,java-web
 
 ### Java-Web ###

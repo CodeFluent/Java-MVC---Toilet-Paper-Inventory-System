@@ -1,11 +1,11 @@
-<%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Register/Login</title>
+    <title>Invalid User</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,7 +14,7 @@
   <link href="../css/reg-login.css" rel="stylesheet" type="text/css"/>
   </head>
   
-    <body>
+  <body>
         <header>
           <div class="navbar navbar-dark bg-dark box-shadow">
             <div class="container d-flex justify-content-between">
@@ -32,16 +32,7 @@
         </header>
 
         <main role="main">
-            <div class="text-center">
-                <form class="form-signin" action="/Toilet-Paper-Inventory-System/login" method="post">
-                  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-                  <label for="inputUsername" class="sr-only">Username</label>
-                  <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
-                  <label for="inputPassword" class="sr-only">Password</label>
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                </form>
-            </div>
+            <h1>Invalid User</h1>
         </main>
         
         
