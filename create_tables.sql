@@ -8,3 +8,6 @@ create table Users  (
 
 INSERT INTO Users (username, password, email, role)
 VALUES ("root", "password", null, "admin");
+
+INSERT INTO Users (username, password, email, role)
+VALUES ("johnny", "pissedaf", "johnny@portapotty.com", "user");

@@ -54,18 +54,9 @@ public class UserBean {
     }
 
     public void setRole(String role) {
-        if (canChangeRole() == true) {
             this.role = role;
-        } // check if this.role is the same after?
-    }
-    
-    public boolean canChangeRole() {
-        if (this.role == "admin") {
-            return true;
-        } else {
-            return false;
-        }
-    }
+    } 
+   
     
 
 }
