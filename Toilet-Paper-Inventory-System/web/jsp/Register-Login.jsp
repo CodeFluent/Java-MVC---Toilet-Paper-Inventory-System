@@ -33,7 +33,7 @@
 
         <main role="main">
             <div class="text-center">
-                <form class="form-signin" action="/Toilet-Paper-Inventory-System/login" method="post">
+                <form class="form-signin" action="/web/login" method="post">
                   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
                   <label for="inputUsername" class="sr-only">Username</label>
                   <input type="text" id="inputUsername" class="form-control" placeholder="Username" name="inputUsername" required autofocus>
@@ -41,10 +41,6 @@
                   <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="inputPassword" required>
                   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                 </form>
-                
-                <form name="form_logon" method="POST" action ="/Toilet-Paper-Inventory-System/test">
-                  <input type="submit" value="Click for Finger Verification" name="btnLogon">
-                </form>    
         </div>
         </main>
         

@@ -51,7 +51,8 @@ public class LoginServlet extends HttpServlet {
                 e.printStackTrace();
             }
           }
-    } 
+    }     
+    
 
     /** 
      * Handles the HTTP <code>POST</code> method.

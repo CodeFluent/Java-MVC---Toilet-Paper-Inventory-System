@@ -18,6 +18,7 @@ public class CustomConnectionDAO {
         final String username = ""; // username for mysql 
         final String password = ""; // password for mysql 
 
+        DriverManager.registerDriver(new com.mysql.jdbc.Driver()); // be sure to have mysql-connector jar and this line.
         Connection conn = DriverManager.getConnection(url, username, password);
 
         return conn;
