@@ -1,6 +1,5 @@
 package Beans;
 
-import Exceptions.UserRightsException;
 
 /**
  *
@@ -54,12 +53,10 @@ public class UserBean {
         this.isLoggedIn = set;
     }
 
-    public void setRole(String role) throws UserRightsException {
+    public void setRole(String role) {
         if (canChangeRole() == true) {
             this.role = role;
-        } else {
-            throw new UserRightsException();
-        }
+        } // check if this.role is the same after?
     }
     
     public boolean canChangeRole() {

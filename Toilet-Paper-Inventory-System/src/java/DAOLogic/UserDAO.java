@@ -4,7 +4,6 @@ import Beans.UserBean;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import Exceptions.UserNotFoundException;
 
 /**
  *
@@ -36,7 +35,7 @@ public class UserDAO extends ConnectionDAO {
             boolean moreData = rs.next();
             
             if (!moreData) {
-                throw new UserNotFoundException();
+                user.setIsLoggedIn(false);
             } else if (moreData) {
                 
                 user.setUsername(rs.getString("username"));
