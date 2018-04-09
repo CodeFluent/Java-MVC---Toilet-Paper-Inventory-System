@@ -1,5 +1,6 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,35 +31,36 @@
           </div>
         </header>
       
-      <%@page import="Beans.ProductBean, DAOLogic.ProductDAO" %>
+      <%@page import="Beans.ProductBean, DAOLogic.ProductDAO, java.lang.Object"%>
       <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 
+      <%  String id = request.getParameter("id");
+          int productId = Integer.parseInt(id);
+          ProductBean p = ProductDAO.getProductById(productId);
+          request.setAttribute("name", p.getName());
+          request.setAttribute("description", p.getDescription());
+          request.setAttribute("cost", p.getPrice());
+          request.setAttribute("stock", p.getStock());
+      %>
+
+        
         <main role="main" class="container">
-          <h1 class="mt-5">Need to take a sh*t? We've got your bottom covered.</h1>
-          <p class="lead">Check out our products below.</p>
+          <h1 class="mt-5">${name}</h1>
+          <p class="lead">${description}</p>
           
-          <% List<ProductBean> list = ProductDAO.getAllProducts();
-             request.setAttribute("list", list); %>
+          <div class="col-lg-9">
+              <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+              <div class="card-body">
+                <h3 class="card-title">asdas</h3>
+                <h4>${cost}</h4>
+              </div>
+          </div>
           
-          <table class="table-hover table-responsive">
-              <thead>
-                <th>Name</th>
-                <th>Cost</th>
-                <th colspan="3">Actions</th>
-              </thead>
-              <tbody>
-                  <c:forEach items="${list}" var="i">
-                      <tr>
-                          <td>${i.getName()}</td>
-                          <td>${i.getPrice()}</td>
-                          <td><a href="ProductDetail.jsp?id=${i.getId()}" class="btn btn-info" role="button">View</a></td>
-                      </tr>
-                  </c:forEach>
-              </tbody>
-          </table>
+         
+          
         </main>
         
-        
+       
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
