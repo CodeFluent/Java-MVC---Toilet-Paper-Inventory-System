@@ -20,12 +20,23 @@
           <a href="index.jsp" class="navbar-brand d-flex align-items-center">
             <strong>Toilet Paper Inc.</strong>
           </a>
-            <nav class="my-2 my-md-0 mr-md-3">
-                <a class="p-2 text-light" href="jsp/Register-Login.jsp">Register/Login</a>
-                <a class="p-2 text-light" href="jsp/ViewProducts.jsp">View Inventory</a>
-                <a class="p-2 text-light" href="jsp/Cart.jsp">Cart</a>
+                <nav class="my-2 my-md-0 mr-md-3">
+                    
+                    <% if (session.getAttribute("loggedIn").equals(false)) { %>
+                    <a class="p-2 text-light" href="/web/jsp/Register-Login.jsp">Register/Login</a>
+                    <% } else { %>
+                    <a class="p-2 text-light" href="/web/jsp/Admin.jsp">Admin</a>
+                    <% } %>
+                    
+                    <a class="p-2 text-light" href="/web/jsp/ViewProducts.jsp">View Inventory</a>
+                    
+                    <% if (session.getAttribute("loggedIn").equals(false)) { %>
+                    <a class="p-2 text-light" href="/web/jsp/Cart.jsp">Cart</a>
+                    <% } else { %>
+                    <a class="p-2 text-light" href="/web/jsp/Orders.jsp">Orders</a>
+                    <% } %>
 
-            </nav>
+                </nav>
         </div>
       </div>
     </header>

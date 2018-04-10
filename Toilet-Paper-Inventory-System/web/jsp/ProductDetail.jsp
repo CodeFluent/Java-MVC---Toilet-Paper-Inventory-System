@@ -21,10 +21,21 @@
               <a href="../index.jsp" class="navbar-brand d-flex align-items-center">
                 <strong>Toilet Paper Inc.</strong>
               </a>
-                <nav class="my-2 my-md-0 mr-md-3">
+                 <nav class="my-2 my-md-0 mr-md-3">
+                    
+                    <% if (session.getAttribute("loggedIn").equals(false)) { %>
                     <a class="p-2 text-light" href="Register-Login.jsp">Register/Login</a>
+                    <% } else { %>
+                    <a class="p-2 text-light" href="Admin.jsp">Admin</a>
+                    <% } %>
+                    
                     <a class="p-2 text-light" href="ViewProducts.jsp">View Inventory</a>
+                    
+                    <% if (session.getAttribute("loggedIn").equals(false)) { %>
                     <a class="p-2 text-light" href="Cart.jsp">Cart</a>
+                    <% } else { %>
+                    <a class="p-2 text-light" href="Orders.jsp">Orders</a>
+                    <% } %>
 
                 </nav>
             </div>
@@ -41,7 +52,6 @@
           request.setAttribute("description", p.getDescription());
           request.setAttribute("cost", p.printPrice());
           request.setAttribute("stock", p.getStock());
-          System.out.println(p.printPrice());
       %>
 
         
@@ -50,16 +60,15 @@
           <p class="lead">${description}</p>
           
           <!--for le future: https://blackrockdigital.github.io/startbootstrap-shop-item/-->
-          <div class="col-lg-9">
-              <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
-              <div class="card-body">
-                <h3 class="card-title">asdas</h3>
-                <h4>${cost}</h4>
+          <div class="col-lg-9 mx-auto mt-5">
+              <div class="card">
+                  <img class="card-img-top" src="http://placehold.it/900x400" alt="">
+                  <div class="card-body">
+                      <h4>Price: &#36; ${cost} <a href="#" class="btn btn-primary float-right">Put In Cart</a> </h4>
+                  </div>
               </div>
+              
           </div>
-          
-         
-          
         </main>
         
        

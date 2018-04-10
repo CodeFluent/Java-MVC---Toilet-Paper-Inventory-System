@@ -22,9 +22,20 @@
                 <strong>Toilet Paper Inc.</strong>
               </a>
                 <nav class="my-2 my-md-0 mr-md-3">
+                    
+                    <% if (session.getAttribute("loggedIn").equals(false)) { %>
                     <a class="p-2 text-light" href="Register-Login.jsp">Register/Login</a>
+                    <% } else { %>
+                    <a class="p-2 text-light" href="Admin.jsp">Admin</a>
+                    <% } %>
+                    
                     <a class="p-2 text-light" href="ViewProducts.jsp">View Inventory</a>
+                    
+                    <% if (session.getAttribute("loggedIn").equals(false)) { %>
                     <a class="p-2 text-light" href="Cart.jsp">Cart</a>
+                    <% } else { %>
+                    <a class="p-2 text-light" href="Orders.jsp">Orders</a>
+                    <% } %>
 
                 </nav>
             </div>
@@ -32,7 +43,8 @@
         </header>
 
         <main role="main">
-            <h1>Invalid User</h1>
+            <h1 class="mt-5">Invalid User</h1>
+            <p>Either you don't have an account or typed in the wrong username/password.</p>
         </main>
         
         

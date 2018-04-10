@@ -5,13 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>User</title>
+    <title>Orders</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
-    <!-- Custom styles for this template -->
-  <link href="../css/reg-login.css" rel="stylesheet" type="text/css"/>
   </head>
   
   <body>
@@ -22,9 +20,20 @@
                 <strong>Toilet Paper Inc.</strong>
               </a>
                 <nav class="my-2 my-md-0 mr-md-3">
+                    
+                    <% if (session.getAttribute("loggedIn").equals(false)) { %>
                     <a class="p-2 text-light" href="Register-Login.jsp">Register/Login</a>
+                    <% } else { %>
+                    <a class="p-2 text-light" href="Admin.jsp">Admin</a>
+                    <% } %>
+                    
                     <a class="p-2 text-light" href="ViewProducts.jsp">View Inventory</a>
+                    
+                    <% if (session.getAttribute("loggedIn").equals(false)) { %>
                     <a class="p-2 text-light" href="Cart.jsp">Cart</a>
+                    <% } else { %>
+                    <a class="p-2 text-light" href="Orders.jsp">Orders</a>
+                    <% } %>
 
                 </nav>
             </div>
@@ -32,7 +41,7 @@
         </header>
 
         <main role="main">
-            <h1>You're a user!</h1>
+           
         </main>
         
         
