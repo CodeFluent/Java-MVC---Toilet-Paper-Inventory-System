@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-          try (PrintWriter out = response.getWriter()) {
+         
         try 
             {
                 UserBean user = new UserBean();
@@ -54,7 +54,7 @@ public class LoginServlet extends HttpServlet {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-          }
+         
     }     
     
 
