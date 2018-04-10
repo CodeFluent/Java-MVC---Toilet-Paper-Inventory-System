@@ -40,6 +40,7 @@ public class UserDAO extends ConnectionDAO {
                 
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
+                user.setId(rs.getInt("userId"));
                 user.setRole(rs.getString("role"));
                 user.setIsLoggedIn(true);
             }
